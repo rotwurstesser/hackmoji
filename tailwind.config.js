@@ -264,6 +264,7 @@ module.exports = {
     },
     height: theme => ({
       auto: 'auto',
+      slotsmall: '80px',
       slot: '200px',
       slotlarge: '650px',
       ...theme('spacing'),
@@ -370,6 +371,7 @@ module.exports = {
     width: theme => ({
       auto: 'auto',
       ...theme('spacing'),
+      slotsmall: '80px',
       slot: '200px',
       slotlarge: '650px',
       '1/2': '50%',
