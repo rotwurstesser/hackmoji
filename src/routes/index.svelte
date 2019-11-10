@@ -46,7 +46,7 @@
 
   <button
     class="bg-black font-raleway mt-16 px-12 py-6 rounded-lg self-center
-    text-4xl text-white w-1/6"
+    text-4xl text-white w-auto"
     on:click={setEmojis}>
     Let's Roll
   </button>
