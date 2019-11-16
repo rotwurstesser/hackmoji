@@ -9,7 +9,8 @@
   let emojis = ["", "", ""];
   let historyItems = [];
 
-  function setEmojis() {
+  function setEmojis(event) {
+    event.preventDefault();
     const width =
       window.innerWidth ||
       document.documentElement.clientWidth ||
