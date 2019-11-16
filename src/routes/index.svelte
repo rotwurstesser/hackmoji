@@ -2,6 +2,7 @@
   import { emojidata } from "../components/emojidata.svelte";
   import Emojis from "../components/Emojis.svelte";
   import History from "../components/History.svelte";
+  import ConfettiGenerator from "confetti-js";
 
   $: slotAmount = 3;
 
@@ -9,6 +10,23 @@
   let historyItems = [];
 
   function setEmojis() {
+    const width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    const height =
+      window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
+
+    var confettiSettings = {
+      target: "my-canvas",
+      width: width,
+      height: height
+    };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
     let array = [];
     for (let i = 0; i < slotAmount; i++) {
       array.push(randomPick(emojidata));
@@ -27,6 +45,7 @@
 <svelte:head>
   <title>Sapper project template</title>
 </svelte:head>
+<canvas class="absolute z-background opacity-50" id="my-canvas" />
 <div class="flex flex-col">
 
   <h1 class="self-center mt-10 pb-10 text-5xl font-raleway">

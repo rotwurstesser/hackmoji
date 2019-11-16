@@ -8371,6 +8371,10 @@ video {
   z-index: auto;
 }
 
+.z-background {
+  z-index: -1;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
@@ -16131,6 +16135,10 @@ video {
 
   .sm\:z-auto {
     z-index: auto;
+  }
+
+  .sm\:z-background {
+    z-index: -1;
   }
 }
 
@@ -23895,6 +23903,10 @@ video {
   .md\:z-auto {
     z-index: auto;
   }
+
+  .md\:z-background {
+    z-index: -1;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -31658,6 +31670,10 @@ video {
   .lg\:z-auto {
     z-index: auto;
   }
+
+  .lg\:z-background {
+    z-index: -1;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -39420,5 +39436,9 @@ video {
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:z-background {
+    z-index: -1;
   }
 }
