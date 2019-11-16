@@ -6,7 +6,7 @@
 
   $: slotAmount = 3;
 
-  let emojis = [];
+  let emojis = ["", "", ""];
   let historyItems = [];
 
   function setEmojis() {
@@ -43,16 +43,22 @@
 </script>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Hackmoji</title>
 </svelte:head>
 <canvas class="absolute z-background opacity-50" id="my-canvas" />
 <div class="flex flex-col">
 
-  <h1 class="font-raleway mt-10 pb-10 px-10 self-center text-5xl text-center">
-    Hackmoji! The perfect Ideation Companion for you
+  <h1 class="font-raleway mt-10 px-10 self-center text-4xl text-center">
+    Hackmoji!
   </h1>
+  <h2 class="font-raleway pb-10 px-10 self-center text-2xl text-center">
+    The perfect Ideation Companion for you
+  </h2>
+
+  <Emojis {emojis} />
   <label
-    class="flex flex-col font-raleway self-center text-base text-center mb-12"
+    class="flex flex-col font-raleway self-center text-base text-center mb-12
+    mt-4"
     for="amountOfSlots">
     <span>Amount of slots in next render</span>
     <input
@@ -60,12 +66,9 @@
       class="bg-gray-200 rounded-lg p-3"
       bind:value={slotAmount} />
   </label>
-
-  <Emojis {emojis} />
-
   <button
-    class="bg-black font-raleway mt-16 px-12 py-6 rounded-lg self-center
-    text-4xl text-white w-auto"
+    class="bg-black font-raleway px-12 py-6 rounded-lg self-center text-4xl
+    text-white w-auto"
     on:click={setEmojis}>
     Let's Roll
   </button>
