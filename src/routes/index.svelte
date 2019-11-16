@@ -48,7 +48,7 @@
 <canvas class="absolute z-background opacity-50" id="my-canvas" />
 <div class="flex flex-col">
 
-  <h1 class="self-center mt-10 pb-10 text-5xl font-raleway">
+  <h1 class="font-raleway mt-10 pb-10 px-10 self-center text-5xl text-center">
     Hackmoji! The perfect Ideation Companion for you
   </h1>
   <label
